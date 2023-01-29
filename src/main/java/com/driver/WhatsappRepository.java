@@ -89,11 +89,17 @@ public class WhatsappRepository {
         return groupMessageMap.get(group).size();
     }
 
-//    public String changeAdmin(User approver, User user, Group group) throws Exception{
-//        if(!groupUserHashMap.containsKey(group)) throw new Exception("Group does not exist");
-//
-//        if(groupUserHashMap.get(group).get(0) != approver) throw new Exception("Approver does not have rights");
-//
-//    }
+    public String changeAdmin(User approver, User user, Group group) throws Exception{
+        if(!groupUserHashMap.containsKey(group)) throw new Exception("Group does not exist");
+
+        if(groupUserHashMap.get(group).get(0) != approver) throw new Exception("Approver does not have rights");
+
+        return "SUCCESS";
+
+    }
+
+    public int removeUser(User user) throws Exception{
+        return 0;
+    }
 
 }
